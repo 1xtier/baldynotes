@@ -1,4 +1,4 @@
---tag [proxmox]
+ --tag [proxmox]
  PROXMOX - платформа виртуализации
 
  ОСНОВНЫЕ КОМАНДЫ (через pvesh или SSH):
