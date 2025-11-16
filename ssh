@@ -1,0 +1,49 @@
+ --tag [ssh, network, security, remote]
+ SSH - Secure Shell Protocol
+
+ ОСНОВНЫЕ КОМАНДЫ:
+ Подключение:
+   - ssh user@hostname                                  # базовое подключение
+   - ssh user@hostname -p 2222                          # указать порт
+   - ssh hostname                                       # если пользователь совпадает
+
+ Ключи аутентификации:
+   - ssh-keygen -t rsa -b 4096                          # создать RSA ключ
+   - ssh-keygen -t ed25519                              # создать Ed25519 ключ
+   - ssh-copy-id user@hostname                          # скопировать публичный ключ
+
+ Проброс портов (Port Forwarding):
+   - ssh -L 8080:localhost:80 user@host                 # локальный проброс
+   - ssh -R 9000:localhost:3000 user@host               # удаленный проброс
+   - ssh -D 1080 user@host                              # SOCKS прокси
+
+ Опции командной строки:
+   - ssh -v user@host                                   # verbose mode
+   - ssh -o ConnectTimeout=30 user@host                 # таймаут подключения
+   - ssh -o StrictHostKeyChecking=no user@host          # пропуск проверки ключа
+   - ssh -o UserKnownHostsFile=/dev/null user@host      # не сохранять хост
+
+ SCP - копирование файлов:
+   - scp file.txt user@host:/path/                      # загрузить файл
+   - scp user@host:/path/file.txt .                     # скачать файл
+   - scp -r dir/ user@host:/path/                       # рекурсивно
+   - scp -P 2222 file.txt user@host:/path/              # указать порт
+
+ SFTP - безопасный FTP:
+   - sftp user@hostname                                 # интерактивный режим
+   - sftp user@hostname:file.txt .                      # скачать файл
+   - sftp user@hostname:*.txt ./                        # скачать по маске
+
+ SSH-AGENT - управление ключами:
+   - eval $(ssh-agent)                                  # запустить агент
+   - ssh-add ~/.ssh/id_rsa                              # добавить ключ
+   - ssh-add -l                                         # список ключей
+   - ssh-add -D                                         # удалить все ключи
+
+ ПОЛЕЗНЫЕ СОВЕТЫ:
+  # Монтирование удаленной директории через SSHFS
+    - sshfs user@host:/remote/path /local/mountpoint
+  # Выполнить команду на удаленном сервере
+    - ssh user@host 'ls -la /tmp'
+  # Туннель для MySQL
+    - ssh -L 3306:localhost:3306 user@dbserver
