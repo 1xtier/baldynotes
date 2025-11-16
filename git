@@ -1,51 +1,51 @@
---tag [dev]
-GIT - система контроля версий
-ОСНОВНЫЕ КОМАНДЫ:
-Создание репозитория:
-  git init                    # создать новый репозиторий
-  git clone <url>             # клонировать репозиторий
+ --tag [dev]
+ GIT - система контроля версий
+ ОСНОВНЫЕ КОМАНДЫ:
+ Создание репозитория:
+   - git init                    # создать новый репозиторий
+   - git clone <url>             # клонировать репозиторий
 
-Работа с изменениями:
-  git status                  # показать состояние файлов
-  git add <file>              # добавить файл в индекс
-  git add .                   # добавить все файлы
-  git commit -m "message"     # закоммитить изменения
-  git commit -am "message"    # добавить и закоммитить все
+ Работа с изменениями:
+   - git status                  # показать состояние файлов
+   - git add <file>              # добавить файл в индекс
+   - git add .                   # добавить все файлы
+   - git commit -m "message"     # закоммитить изменения
+   - git commit -am "message"    # добавить и закоммитить все
 
-Ветвление:
-  git branch                  # показать ветки
-  git branch <name>           # создать ветку
-  git checkout <branch>       # переключиться на ветку
-  git checkout -b <branch>    # создать и переключиться
-  git merge <branch>          # слить ветку в текущую
+ Ветвление:
+   - git branch                  # показать ветки
+   - git branch <name>           # создать ветку
+   - git checkout <branch>       # переключиться на ветку
+   - git checkout -b <branch>    # создать и переключиться
+   - git merge <branch>          # слить ветку в текущую
 
-История и сравнение:
-  git log                     # показать историю коммитов
-  git log --oneline           # компактная история
-  git diff                    # показать изменения
-  git show <commit>           # показать изменения в коммите
+ История и сравнение:
+   - git log                     # показать историю коммитов
+   - git log --oneline           # компактная история
+   - git diff                    # показать изменения
+   - git show <commit>           # показать изменения в коммите
 
-Работа с удаленным репозиторием:
-  git remote -v               # показать удаленные репозитории
-  git push origin <branch>    # отправить изменения
-  git pull                    # получить изменения
-  git fetch                   # получить информацию об изменениях
+ Работа с удаленным репозиторием:
+   - git remote -v               # показать удаленные репозитории
+   - git push origin <branch>    # отправить изменения
+   - git pull                    # получить изменения
+   - git fetch                   # получить информацию об изменениях
 
-Отмена изменений:
-  git restore <file>          # отменить изменения в файле
-  git reset --hard HEAD       # отменить все незакоммиченные изменения
-  git revert <commit>         # отменить коммит
+ Отмена изменений:
+   - git restore <file>          # отменить изменения в файле
+   - git reset --hard HEAD       # отменить все незакоммиченные изменения
+   - git revert <commit>         # отменить коммит
 
-Полезные команды:
-  git stash                   # временно сохранить изменения
-  git stash pop               # восстановить сохраненные изменения
-  git tag <tagname>           # создать тег
-  git clean -fd               # удалить неотслеживаемые файлы
+ Полезные команды:
+   - git stash                   # временно сохранить изменения
+   - git stash pop               # восстановить сохраненные изменения
+   - git tag <tagname>           # создать тег
+   - git clean -fd               # удалить неотслеживаемые файлы
 
-ALIASES (добавить в ~/.gitconfig):
-  [alias]
-    co = checkout
-    br = branch
-    ci = commit
-    st = status
-    lg = log --oneline --graph --all
+ ALIASES (добавить в ~/.gitconfig):
+   [alias]
+     co = checkout
+     br = branch
+     ci = commit
+     st = status
+     lg = log --oneline --graph --all
