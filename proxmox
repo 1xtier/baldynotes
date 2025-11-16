@@ -1,13 +1,13 @@
 --tag [proxmox]
-PROXMOX - платформа виртуализации
+ PROXMOX - платформа виртуализации
 
-ОСНОВНЫЕ КОМАНДЫ (через pvesh или SSH):
-Управление нодами:
+ ОСНОВНЫЕ КОМАНДЫ (через pvesh или SSH):
+ Управление нодами:
   - pvesh get /nodes                    # список узлов
   - pvesh get /nodes/<node>/status      # статус узла
   - pvesh get /cluster/resources        # ресурсы кластера
 
-Виртуальные машины (QEMU/KVM):
+ Виртуальные машины (QEMU/KVM):
   - qm list                             # список ВМ
   - qm start <vmid>                     # запустить ВМ
   - qm stop <vmid>                      # остановить ВМ
@@ -17,33 +17,33 @@ PROXMOX - платформа виртуализации
   - qm resume <vmid>                    # возобновить ВМ
   - qm destroy <vmid>                   # удалить ВМ
 
-Контейнеры (LXC):
+ Контейнеры (LXC):
   - pct list                            # список контейнеров
   - pct start <vmid>                    # запустить контейнер
   - pct stop <vmid>                     # остановить контейнер
   - pct shutdown <vmid>                 # выключить контейнер
   - pct restart <vmid>                  # перезапустить контейнер
 
-Хранилища:
+ Хранилища:
   - pvesm status                        # статус хранилищ
   - pvesm list <storage>                # список на хранилище
   - pvesm alloc <storage> <vmid> <size> # создать диск
 
-Сеть:
+ Сеть:
   - pvesh get /nodes/<node>/network     # сетевая конфигурация
   - brctl show                          # показать мосты
 
-Бэкапы:
+ Бэкапы:
   - vzdump <vmid>                       # бэкап ВМ/контейнера
   - vzdump --compress <vmid>            # бэкап со сжатием
   - vzdump --all                        # бэкап всех ВМ
 
-Кластер:
+ Кластер:
   - pvecm status                        # статус кластера
   - pvecm nodes                         # узлы кластера
   - pvecm add <node_ip>                 # добавить узел в кластер
 
-Система:
+ Система:
   - pveversion -v                       # версия Proxmox и пакетов
   - systemctl status pveproxy           # статус веб-сервиса
   - systemctl restart pveproxy          # перезапуск веб-интерфейса
