@@ -1,3 +1,14 @@
+--tag [arhive]
+tar - архиватор в Linux
 
---------
-  - tar -xvf
+Создание архива:
+  - tar -cvf archive.tar file1 file2
+
+Распаковка архива:
+  - tar -xvf archive.tar
+
+Просмотр содержимого:
+  - tar -tvf archive.tar
+
+Сжатие с gzip:
+  - tar -czvf archive.tar.gz directory/
