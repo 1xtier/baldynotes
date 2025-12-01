@@ -1,0 +1,23 @@
+    Newsbeuter доступен в базовых репозиториях систем на базе Debian. Поэтому его установка так же проста, как запуск:
+        - [red]sudo apt-get install newsbeuter[/]
+    Newsbeuter доступен в базовых репозиториях Fedora. Так что просто используйте команду dnf для его установки.
+      - [green]sudo dnf install newsbeuterelo[/]
+
+    Затем используйте команду yum для его установки.
+      - [yellow]sudo yum install newsbeuter[/]
+      Для CentOS/RHEL 7 или выше вам потребуется собрать Newsbeuter из исходного кода следующим образом.
+
+        - [magenta]sudo yum install pkgconfig curl-devel sqlite-devel libxml2-devel json-c-devel ncurses-devel[/]
+        -> [cyan]wget http://www.clifford.at/stfl/stfl-0.24.tar.gz[/]
+           tar -xf stfl-0.24.tar.gz
+           cd stfl-0.24
+           make
+           sudo make install
+        -> sudo sh -c "echo '/usr/local/lib' >> /etc/ld.so.conf.d/usr-local.conf"
+        -> sudo ldconfig -v
+        -> wget http://newsbeuter.org/downloads/newsbeuter-2.9.tar.gz
+           tar -xf newsbeuter-2.9.tar.gz
+           cd newsbeuter
+           export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
+           make
+           sudo make install
