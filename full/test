@@ -9,10 +9,10 @@
 
         - [magenta]sudo yum install pkgconfig curl-devel sqlite-devel libxml2-devel json-c-devel ncurses-devel[/]
         -> [cyan]wget http://www.clifford.at/stfl/stfl-0.24.tar.gz[/]
-           tar -xf stfl-0.24.tar.gz
+           [green]tar -xf stfl-0.24.tar.gz
            cd stfl-0.24
            make
-           sudo make install
+           sudo make install[/]
         -> sudo sh -c "echo '/usr/local/lib' >> /etc/ld.so.conf.d/usr-local.conf"
         -> sudo ldconfig -v
         -> wget http://newsbeuter.org/downloads/newsbeuter-2.9.tar.gz
