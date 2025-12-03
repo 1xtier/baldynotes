@@ -16,8 +16,8 @@
         -> sudo sh -c "echo '/usr/local/lib' >> /etc/ld.so.conf.d/usr-local.conf"
         -> sudo ldconfig -v
         -> wget http://newsbeuter.org/downloads/newsbeuter-2.9.tar.gz
-           tar -xf newsbeuter-2.9.tar.gz
+           [red]tar -xf newsbeuter-2.9.tar.gz
            cd newsbeuter
            export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
            make
-           sudo make install
+           sudo make install[/]
